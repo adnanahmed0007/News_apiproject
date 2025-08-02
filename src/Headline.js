@@ -1,16 +1,13 @@
-
-
-
-import axios from 'axios';
+ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import Mycontext from './Mycontext';
-import { useContext } from 'react';
+ 
+ 
 import "./Headline.css";
 const Headline = () => {
     const [Click5, SetCick5] = useState(false);
     const [Write5, Setwrite5] = useState("")
     const [data2, setDta2] = useState([])
-    const { Check } = useContext(Mycontext)
+   
     useEffect(() => {
         if (Click5) {
             async function get_data2() {
@@ -30,7 +27,7 @@ const Headline = () => {
                 <h1>
                     Search for the Latest headline in the country
                 </h1>
-                {Check ?
+                
                     <div className='data_fetchheadline'>
 
                         <div className='input_headline'>
@@ -78,7 +75,7 @@ const Headline = () => {
                             </div>}
 
                         </div>
-                    </div> : <h1 className='not_login_headline'>Go to the login/Register page</h1>}
+                    </div>  
 
             </div>
 
@@ -87,3 +84,6 @@ const Headline = () => {
 }
 
 export default Headline
+
+
+ 
