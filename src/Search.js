@@ -1,14 +1,13 @@
-import axios from 'axios';
+   import axios from 'axios';
 import React, {  useEffect, useState } from 'react';
-import Mycontext from './Mycontext';
-import { useContext } from 'react';
+ 
 import "./Search.css"
 
 const Search = () => {
     const [write,Setwrite]=useState("");
     const [click4,SetClick4]=useState(false);
     const [data1,setDta]=useState([])
-    const {Check}=useContext(Mycontext)
+    
     
         useEffect(()=>
     {
@@ -35,7 +34,7 @@ const Search = () => {
     <div className='header_h1'>
     <h1> Serach for the latest news </h1>
     </div>
-    {Check?
+     
     <div className='input_Search'>
 
     <div className='type_input'>
@@ -94,7 +93,7 @@ const Search = () => {
     </div>
     
     </div>
-    :<h1 className="not_login">Go to regsiter page  for chcek the lates news</h1>}
+     
       
     </div>
   )
